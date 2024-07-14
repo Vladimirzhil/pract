@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ffebab;
+    color: #222;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+header{
+    position: relative;
+}
+
+header .logo{
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+header .shop-cart-button{
+    float: right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: 160px;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+    color: #dc3d3d;
+    transform: scale(1.5);
+}
+
+header .shop-cart{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 450px;
+    background-color: #fafafa;
+    -webkit-box-shadow: 4px 5px 15px -7px #606060;
+    box-shadow: 4px 5px 15px -7px #606060;
+    margin-right: 30px;
+    z-index: 1000;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.cart-count {
+    position: absolute;
+    background-color: #dc3d3d;
+    color: white;
+    top: -10px;
+    right: -13px;
+    border-radius: 100%;
+    padding: 2px 6px;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 160px;
+}
+
+header .shop-cart .empty h2{
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+.item-order {
+    width: auto; 
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; 
+    background-color: white;
+    width: 410px;
+}
+
+.item-order img {
+    width: 80px; 
+    margin-right: 10px; 
+}
+
+.item-order h2 {
+    font-size: 25px;
+    margin: 0 10px 0 0; 
+}
+
+.item-order b {
+    color: #5fa36a;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: auto; 
+    position: relative;
+    top: 2px;
+}
+
+.item-order .buttonchangeplus,
+.item-order .change,
+.item-order .trash {
+    cursor: pointer;
+    margin: 0 5px; 
+    transition: color 500ms ease, transform 500ms ease; 
+    font-size: 25px;
+}
+.item-order .buttonchangeminus{
+    cursor: pointer;
+    margin: 0 5px; 
+    transition: color 500ms ease, transform 500ms ease; 
+    font-size: 30px;
+    position: relative;
+    top: -3px;
+}
+
+.item-order .buttonchangeplus:hover,
+.item-order .trash:hover {
+    color: #dc3d3d;
+    transform: scale(1.5);
+}
+.item-order .buttonchangeminus:hover{
+    color: #dc3d3d;
+    transform: scale(1.5);
+    position: relative;
+    top: -4px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+a, .navbar-nav .nav-link, .link {
+    padding : 15px;
+    font-size: 25px;
+    color: #222;
+    text-decoration: none;
+}
+
+a:hover, .navbar-nav .nav-link:hover, .link:hover {
+    color: #ccc;
+}
+
+.slider-image {
+    height: 700px;
+    object-fit: cover;
+    filter: sepia(50%) saturate(250%) brightness(60%); /* Более желтый оттенок */
+}
+
+.carousel .carousel-item .slider-caption-container {
+    position: absolute;
+    top: 50%; /* Центр по вертикали */
+    left: 50%; /* Центр по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвиг влево и вверх на 50% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel .carousel-item .slider-caption {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 50px;
+}
+
+
+.footer-container {
+    background-color: #cb5157;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-text p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.footer-text a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.footer-geo {
+    margin-top: 15px;
+}
+
+.type-item {
+    display: inline-block;
+    background: #f1ce5b;
+    border-radius: 100px;
+    padding: 10px 20px; /* Убедитесь, что здесь используются пробелы */
+    margin-bottom: -10px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+    /* Дополнительные стили для элементов списка */
+}
+
+.type div:hover{
+    border-color: #222;
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Изменено с space-between на flex-start */
+    padding: 40px; 
+    gap: 50px; /* Добавлено для создания промежутка между карточками */
+}
+
+main .item {
+    width: calc(25% - 40px); /* Изменено для корректного расчета ширины с учетом промежутка */
+    margin-bottom: 20px; /* Уменьшен отступ снизу */
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+    box-sizing: border-box; /* Добавлено для включения padding в общую ширину */
+}
+
+main .item img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+}
+
+main .item img:hover{
+    transform: scale(1.05);
+}
+
+.custom-modal {
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto; 
+    position: relative;
+  }
+  .custom-modal input {
+    width: calc(100% - 40px); /* Вычитаем двойной размер отступа (20px с каждой стороны) */
+    margin: 20px; /* Устанавливаем отступ от краев */
+  }
+
+  .custom-modal img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+  }
+  .custom-modal img:hover{
+    transform: scale(1.05);
+  }
+
+.custom-modal h2,.custom-modal p,.custom-modal b,
+main h2, main p, main b{
+    margin: 10px 20px;
+    color: #333;
+}
+.custom-modal b,
+main b{color: #5fa36a;}
+
+.custom-modal .add-to-cart,
+main .add-to-cart{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+}
+
+.custom-modal .add-to-cart:hover,
+main .add-to-cart:hover{
+    transform: scale(1.5) translateY(-5px);
+}
+
+.text-centr{
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 0px;
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1500px;
+    text-align: justify;
+  }
+  
+  .container img {
+    margin-right: 20px;
+    max-width: 800px;
+    height: auto;
+  }
+  
+  .container p {
+    flex: 1;
+    padding: 30px;
+    font-size: 25px;
+  }
+
+  .vk-icons{
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 500ms ease;
+  }
+  .vk-icons:hover{
+    transform: scale(1.5);
+  }
+
+  .total-cost {
+    /* Другие стили для блока с общей стоимостью */
+    color: #5fa36a; /* Зеленый цвет для текста */
+  }
+
+
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .order-form div {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .order-form input[type="text"],
+  .order-form input[type="tel"],
+  .order-form select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .order-form .btn {
+    background-color: #f1ce5b;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    margin-bottom: 20px; /* Добавляем отступ вниз */
+  }
+  
+  .order-form .btn:hover {
+    background-color: #cb5157; /* Изменяем цвет фона при наведении */
+    color: #fff; /* Изменяем цвет текста при наведении */
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  
+  
+  
+  
+  
